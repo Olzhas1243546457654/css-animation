@@ -1,0 +1,239 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #333;
+}
+
+section {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+@keyframes orbiting {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+#system {
+	height: 300px;
+	width: 300px;
+	position: relative;
+}
+
+#sun {
+	background-color: #ffcc00;
+	height: 60px;
+	width: 60px;
+	position: absolute;
+	top: 120px;
+	left: 120px;
+	border-radius: 50%;
+}
+
+#venus {
+	border: 1px solid #555;
+	height: 200px;
+	width: 200px;
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	border-radius: 50%;
+	animation: orbiting 12s linear infinite;
+}
+
+#venus > div {
+	--radius: 3px;
+	background-color: white;
+	position: absolute;
+	width: calc(var(--radius) * 2);
+	height: calc(var(--radius) * 2);
+	left: calc(50% - var(--radius));
+	top: calc(var(--radius) * -1);
+	border-radius: 50%;
+	animation: orbiting 2s linear infinite;
+}
+
+#mercury {
+	border: 1px solid #555;
+	height: 150px;
+	width: 150px;
+	position: absolute;
+	top: 75px;
+	left: 75px;
+	border-radius: 50%;
+	animation: orbiting 7s linear infinite;
+}
+
+#mercury > div {
+	--radius: 2px;
+	background-color: grey;
+	position: absolute;
+	width: calc(var(--radius) * 2);
+	height: calc(var(--radius) * 2);
+	left: calc(50% - var(--radius));
+	top: calc(var(--radius) * -1);
+	border-radius: 50%;
+	animation: orbiting 2s linear infinite;
+}
+
+/* earth orbit path */
+#earth {
+	border: 1px solid #555;
+	height: 300px;
+	width: 300px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	animation: orbiting 20s linear infinite;
+}
+
+/* earth */
+#earth > div {
+	--radius: 5px;
+	background-color: #00baff;
+	position: absolute;
+	width: calc(var(--radius) * 2);
+	height: calc(var(--radius) * 2);
+	left: calc(50% - var(--radius));
+	top: calc(var(--radius) * -1);
+	border-radius: 50%;
+	animation: orbiting 2s linear infinite;
+}
+
+/* moon */
+#earth > div > div {
+	--radius: 2px;
+	background-color: #999;
+	position: absolute;
+	width: calc(var(--radius) * 2);
+	height: calc(var(--radius) * 2);
+	left: calc(50% - var(--radius));
+	top: -28px; /* distance of moon from earth */
+	border-radius: 50%;
+}
+
+#mars {
+	border: 1px solid #555;
+	height: 400px;
+	width: 400px;
+	position: absolute;
+	top: -45px;
+	left: -45px;
+	border-radius: 50%;
+	animation: orbiting 25s linear infinite;
+}
+
+#mars > div {
+	--radius: 7px;
+	background-color: orange;
+	position: absolute;
+	width: calc(var(--radius) * 2);
+	height: calc(var(--radius) * 2);
+	left: calc(50% - var(--radius));
+	top: calc(var(--radius) * -1);
+	border-radius: 50%;
+	animation: orbiting 2s linear infinite;
+}
+
+#jupiter {
+	border: 1px solid #555;
+	height: 500px;
+	width: 500px;
+	position: absolute;
+	top: -100px;
+	left: -95px;
+	border-radius: 50%;
+	animation: orbiting 35s linear infinite;
+}
+
+#jupiter > div {
+	--radius: 20px;
+	background-color: brown;
+	position: absolute;
+	width: calc(var(--radius) * 2);
+	height: calc(var(--radius) * 2);
+	left: calc(50% - var(--radius));
+	top: calc(var(--radius) * -1);
+	border-radius: 50%;
+	animation: orbiting 2s linear infinite;
+}
+
+#saturn {
+	border: 1px solid #555;
+	height: 650px;
+	width: 650px;
+	position: absolute;
+	top: -175px;
+	left: -160px;
+	border-radius: 50%;
+	animation: orbiting 40s linear infinite;
+}
+
+#saturn > div {
+	--radius: 15px;
+	background-color: yellow;
+	position: absolute;
+	width: calc(var(--radius) * 2);
+	height: calc(var(--radius) * 2);
+	left: calc(50% - var(--radius));
+	top: calc(var(--radius) * -1);
+	border-radius: 50%;
+	animation: orbiting 2s linear infinite;
+}
+
+
+
+#uranus {
+	border: 1px solid #555;
+	height: 750px;
+	width: 750px;
+	position: absolute;
+	top: -220px;
+	left: -200px;
+	border-radius: 50%;
+	animation: orbiting 50s linear infinite;
+}
+
+#uranus > div {
+	--radius: 7px;
+	background-color: darkcyan;
+	position: absolute;
+	width: calc(var(--radius) * 2);
+	height: calc(var(--radius) * 2);
+	left: calc(50% - var(--radius));
+	top: calc(var(--radius) * -1);
+	border-radius: 50%;
+	animation: orbiting 2s linear infinite;
+}
+
+#neptune {
+	border: 1px solid #555;
+	height: 850px;
+	width: 850px;
+	position: absolute;
+	top: -270px;
+	left: -250px;
+	border-radius: 50%;
+	animation: orbiting 60s linear infinite;
+}
+
+#neptune > div {
+	--radius: 7px;
+	background-color: blue;
+	position: absolute;
+	width: calc(var(--radius) * 2);
+	height: calc(var(--radius) * 2);
+	left: calc(50% - var(--radius));
+	top: calc(var(--radius) * -1);
+	border-radius: 50%;
+	animation: orbiting 2s linear infinite;
+}
